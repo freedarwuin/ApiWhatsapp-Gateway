@@ -68,31 +68,31 @@ global.sessionName = "session"; // session name
 Clonar el proyecto
 
 ```bash
-  git clone https://github.com/freedarwuin/ApiWhatsapp-Gateway.git
+git clone https://github.com/freedarwuin/ApiWhatsapp-Gateway.git
 ```
 
 Ir al directorio del proyecto
 
 ```bash
-  cd ApiWhatsapp-Gateway
+cd ApiWhatsapp-Gateway
 ```
 
 Instalar dependencias
 
 ```bash
-  npm install
+npm install
 ```
 
 Iniciar el servidor
 
 ```bash
-  npm run start
+npm run start
 ```
 
 Abrir en el navegador e iniciar una nueva sesión para obtener el código QR si el código de emparejamiento es falso
 
 ```bash
-  http://localhost:80/scan
+http://localhost:80/scan
 ```
 
 ## Referencia API
