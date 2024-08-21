@@ -63,52 +63,52 @@ global.sessionName = "session"; // session name
 
 ```
 
-### Install and Running
+### Instalación y funcionamiento
 
-Clone the project
+Clonar el proyecto
 
 ```bash
   git clone https://github.com/freedarwuin/ApiWhatsapp-Gateway.git
 ```
 
-Go to the project directory
+Ir al directorio del proyecto
 
 ```bash
   cd ApiWhatsapp-Gateway
 ```
 
-Install dependencies
+Instalar dependencias
 
 ```bash
   npm install
 ```
 
-Start the server
+Iniciar el servidor
 
 ```bash
   npm run start
 ```
 
-Open On Browser & Start New Session to Get QRCode if PairingCode False
+Abrir en el navegador e iniciar una nueva sesión para obtener el código QR si el código de emparejamiento es falso
 
 ```bash
-  http://localhost:5001/scan
+  http://localhost:80/scan
 ```
 
-## API Reference
+## Referencia API
 
-#### Send Text Message
+#### Enviar mensaje de texto
 
 ```
   POST /send-message
   GET /send-message?message=Text&number=08123456789
 ```
 
-| Body      | Type     | Description                                                         |
+| Cuerpo      | Tipo     | Descripción                                                         |
 | :-------- | :------- | :------------------------------------------------------------------ |
-| `message` | `string` | **Required**. Text Message                                          |
-| `number`  | `string` | **Required**. Receiver Phone Number (e.g: 62812345678 / 0812345678) |
+| `message` | `string` | **Requerido**. Mensaje de texto                                          |
+| `number`  | `string` | **Requerido**. Número de teléfono del receptor (p. ej.: 62812345678 / 0812345678) |
 
-## Changelog
+## Registro de cambios
 
 #### [CHANGELOG.md](CHANGELOG.md)
