@@ -1,10 +1,10 @@
 const fs = require("fs");
 
-// ============= GLOBAL SETTING ============ //
-global.port = "5001"; // Port Api / Browser
-global.countrycode = "ID"; // Country Code - https://countrycode.org/ (ISO CODES)
-global.countrycodephone = "58"; // Country Phone - https://countrycode.org/ (COUNTRY CODE)
-global.timezone = "America/Caracas"; // Time Zone
+// ============= CONFIGURACIÓN GLOBAL ============ //
+global.port = "80"; // Puerto API / Navegador
+global.countrycode = "ID"; // Código de país - https://countrycode.org/ (CÓDIGOS ISO)
+global.countrycodephone = "58"; // Teléfono del país - https://countrycode.org/ (CÓDIGO DEL PAÍS)
+global.timezone = "America/Caracas"; // Huso horario
 global.usePairingNumber = false; // true = Emparejamiento Code / false = QRCode
 global.pairingNumber = "4129056224"; // Número de WhatsApp utilizado como bot para emparejar números.
 //========================================================

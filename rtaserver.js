@@ -55,7 +55,7 @@ app.use("/p/*", (req, res) => res.status(404).send("Media Not Found"));
 const PORT = global.port || "5000";
 app.set("port", PORT);
 var server = http.createServer(app);
-server.on("listening", () => console.log("APP IS RUNNING ON PORT " + PORT));
+server.on("listening", () => console.log("LA APLICACIÓN SE ESTÁ EJECUTANDO EN EL PUERTO " + PORT));
 
 server.listen(PORT);
 
@@ -155,7 +155,7 @@ async function Botstarted() {
       if (
         !Object.keys(PHONENUMBER_MCC).some((v) => phoneNumber.startsWith(v))
       ) {
-        console.log("Start with your country's WhatsApp code, Example : 62xxx");
+        console.log("Comience con el código de WhatsApp de su país, ejemplo: 58xxx");
         process.exit(0);
       }
     } else {
@@ -166,7 +166,7 @@ async function Botstarted() {
       if (
         !Object.keys(PHONENUMBER_MCC).some((v) => phoneNumber.startsWith(v))
       ) {
-        console.log("Start with your country's WhatsApp code, Example : 62xxx");
+        console.log("Comience con el código de WhatsApp de su país, ejemplo: 58xxx");
 
         phoneNumber = await question(`Please type your WhatsApp number : `);
         phoneNumber = phoneNumber.replace(/[^0-9]/g, "");
@@ -177,7 +177,7 @@ async function Botstarted() {
     setTimeout(async () => {
       let code = await rtaserver.requestPairingCode(phoneNumber);
       code = code?.match(/.{1,4}/g)?.join("-") || code;
-      console.log(`Your Pairing Code : `, code);
+      console.log(`Tu código de emparejamiento : `, code);
     }, 3000);
   }
 
@@ -276,30 +276,30 @@ async function Botstarted() {
     if (connection === "close") {
       let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
       if (reason === DisconnectReason.badSession) {
-        console.log(`Bad Session File, Please Delete Session and Scan Again`);
+        console.log(`Archivo de sesión defectuoso. Elimine la sesión y escanee nuevamente`);
         rtaserver.logout();
       } else if (reason === DisconnectReason.connectionClosed) {
-        console.log("Connection closed, reconnecting....");
+        console.log("Conexión cerrada, reconectándose....");
         Botstarted();
       } else if (reason === DisconnectReason.connectionLost) {
-        console.log("Connection Lost from Server, reconnecting...");
+        console.log("Conexión perdida desde el servidor, reconectándome...");
         Botstarted();
       } else if (reason === DisconnectReason.connectionReplaced) {
         console.log(
-          "Connection Replaced, Another New Session Opened, reconnecting..."
+          "Conexión reemplazada, otra nueva sesión abierta, reconectando..."
         );
         Botstarted();
       } else if (reason === DisconnectReason.loggedOut) {
         console.log(`Device Logged Out, Please Scan Again And Run.`);
         rtaserver.logout();
       } else if (reason === DisconnectReason.restartRequired) {
-        console.log("Restart Required, Restarting...");
+        console.log("Se requiere reiniciar, reiniciando...");
         Botstarted();
       } else if (reason === DisconnectReason.timedOut) {
-        console.log("Connection TimedOut, Reconnecting...");
+        console.log("Tiempo de conexión agotado, Conectando...");
         Botstarted();
       } else if (reason === DisconnectReason.Multidevicemismatch) {
-        console.log("Multi device mismatch, please scan again");
+        console.log("No hay coincidencia en varios dispositivos, vuelva a escanear");
         rtaserver.logout();
       } else rtaserver.end(`Unknown DisconnectReason: ${reason}|${connection}`);
     }
@@ -307,7 +307,7 @@ async function Botstarted() {
       update.connection == "open" ||
       update.receivedPendingNotifications == "true"
     ) {
-      console.log(`Connected to = ` + JSON.stringify(rtaserver.user, null, 2));
+      console.log(`Conectado a = ` + JSON.stringify(rtaserver.user, null, 2));
     }
 
     if (update.qr) {
@@ -360,20 +360,20 @@ const updateQR = (data) => {
     case "qr":
       qrcode.toDataURL(qr, (err, url) => {
         soket?.emit("qr", url);
-        soket?.emit("log", "QR Code received, please scan!");
+        soket?.emit("log", "Código QR recibido, ¡por favor escanéalo!");
       });
       break;
     case "connected":
       soket?.emit("qrstatus", "./assets/check.svg");
-      soket?.emit("log", "WhatsApp terhubung!");
+      soket?.emit("log", "WhatsApp conectado!");
       break;
     case "qrscanned":
       soket?.emit("qrstatus", "./assets/check.svg");
-      soket?.emit("log", "QR Code Telah discan!");
+      soket?.emit("log", "¡El código QR ha sido escaneado!");
       break;
     case "loading":
       soket?.emit("qrstatus", "./assets/loader.gif");
-      soket?.emit("log", "Registering QR Code , please wait!");
+      soket?.emit("log", "Registrando código QR, ¡por favor espere!");
       break;
     default:
       break;
@@ -390,7 +390,7 @@ app.all("/send-message", async (req, res) => {
       if (!number) {
         res.status(500).json({
           status: false,
-          response: "Nomor WA belum tidak disertakan!",
+          response: "¡El número WA aún no está incluido!",
         });
       } else {
         if (number.startsWith("0")) {
@@ -440,13 +440,13 @@ app.all("/send-message", async (req, res) => {
           } else {
             res.status(500).json({
               status: false,
-              response: `Nomor ${number} tidak terdaftar.`,
+              response: `El número ${number} no aparece en la lista.`,
             });
           }
         } else {
           res.status(500).json({
             status: false,
-            response: `WhatsApp belum terhubung.`,
+            response: `WhatsApp aún no está conectado.`,
           });
         }
       }
