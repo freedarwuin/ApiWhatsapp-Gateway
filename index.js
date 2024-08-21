@@ -9,14 +9,14 @@ function start() {
   })
     .on("message", (data) => {
       if (data == "reset") {
-        console.log("Restarting Bot...");
+        console.log("Reiniciando el bot ...");
         p.kill();
         start();
         delete p;
       }
     })
     .on("exit", (code) => {
-      console.error("Exited with code:", code);
+      console.error("Salió con el código:", code);
       if (code == "." || code == 1 || code == 0) start();
     });
 }
