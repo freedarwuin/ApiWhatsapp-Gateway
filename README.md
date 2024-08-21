@@ -1,9 +1,9 @@
 <h1 align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" alt="PhpNuxBill" width="150">
-  <br>Api Whatsapp Gateway - To send notifications to customers<br>
+  <br>Api Whatsapp Gateway - Para enviar notificaciones a clientes<br>
 </h1>
 
-<h4 align="center">Unofficial Whatsapp Gateway Using NodeJs</h4>
+<h4 align="center">Pasarela no oficial de WhatsApp que utiliza NodeJs</h4>
 
 <p align="center">
   <a href="https://github.com/rtaserver/ApiWhatsapp-Gateway/releases">
@@ -15,34 +15,34 @@
   
 </p>
 
-## Features
+## Características
 
-Easy Setup Headless multi session Whatsapp Gateway with NodeJS.
+Fácil configuración de una pasarela de WhatsApp multisesión sin interfaz gráfica con NodeJS.
 
-- Support multi device
-- Support Pairing Code
-- Anti delay message
-
-<p>
-
-#### Based on [WhiskeySockets-Baileys](https://github.com/WhiskeySockets/Baileys)
-
-#### Free Whatsapp Gateway By IbnuX [https://wa.nux.my.id/](https://wa.nux.my.id/)
+- Admite varios dispositivos
+- Admite código de emparejamiento
+- Mensaje sin demora
 
 <p>
 
-## Documentation
+#### Residencia en [WhiskeySockets-Baileys](https://github.com/WhiskeySockets/Baileys)
 
-### Settings Variables
+#### Pasarela gratuita de WhatsApp de IbnuX [https://wa.nux.my.id/](https://wa.nux.my.id/)
 
-To run this project, you will need to edit variables in `settings.js` file
+<p>
+
+## Documentación
+
+### Variables de configuración
+
+Para ejecutar este proyecto, necesitará editar las variables en el archivo `settings.js`
 
 ```
-// ============= GLOBAL SETTING ============ //
-global.port = "5001"; // Port Api / Browser
-global.countrycode = "ID"; // Country Code - https://countrycode.org/ (ISO CODES)
-global.countrycodephone = "62"; // Country Phone - https://countrycode.org/ (COUNTRY CODE)
-global.timezone = "Asia/Jakarta"; // Time Zone
+// ============= CONFIGURACIÓN GLOBAL ============ //
+global.port = "5001"; // Puerto API / Navegador
+global.countrycode = "ID"; // Código de país - https://countrycode.org/ (CÓDIGOS ISO)
+global.countrycodephone = "58"; // Teléfono del país - https://countrycode.org/ (CÓDIGO DEL PAÍS)
+global.timezone = "America/Caracas"; // Huso horario
 global.usePairingNumber = false; // true = Pairing Code / false = QRCode
 global.pairingNumber = ""; // whatsapp number used as a bot, for pairing number
 //========================================================
