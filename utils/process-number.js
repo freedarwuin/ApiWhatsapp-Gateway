@@ -6,7 +6,7 @@ exports.processNumber = (number) => {
     return number.substring(1);
   if (number[0] == "0" && number[1] == "8") {
     let deleted = number.substring(1);
-    finalNumber = "62" + deleted;
+    finalNumber = "58" + deleted;
     return finalNumber;
   }
   if (number[0] == "8") return "62" + number;
