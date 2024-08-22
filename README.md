@@ -100,13 +100,13 @@ http://localhost:5001/scan
 
 ```
 POST /send-message
-GET /send-message?message=Text&number=08123456789
+GET /send-message?message=Text&number=584129056224
 ```
 
-| Cuerpo      | Tipo     | Descripción                                                         |
-| :-------- | :------- | :------------------------------------------------------------------ |
-| `message` | `string` | **Requerido**. Mensaje de texto                                          |
-| `number`  | `string` | **Requerido**. Número de teléfono del receptor (p. ej.: 62812345678 / 0812345678) |
+| Cuerpo      | Tipo     | Descripción                                                                       |
+| :-------- | :------- |:----------------------------------------------------------------------------------|
+| `message` | `string` | **Requerido**. Mensaje de texto                                                   |
+| `number`  | `string` | **Requerido**. Número de teléfono del receptor (p. ej.: 58812345678 / 0812345678) |
 
 ## Registro de cambios
 
