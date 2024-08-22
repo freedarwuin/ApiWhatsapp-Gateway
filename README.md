@@ -100,8 +100,8 @@ http://localhost:80/scan
 #### Enviar mensaje de texto
 
 ```
-  POST /send-message
-  GET /send-message?message=Text&number=08123456789
+POST /send-message
+GET /send-message?message=Text&number=08123456789
 ```
 
 | Cuerpo      | Tipo     | Descripción                                                         |
