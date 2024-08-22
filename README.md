@@ -52,7 +52,7 @@ global.use_pp = true; // use a logo?
 
 //========================================================
 
-global.kontakadmin = ["6281287123512"]; // admin whatsapp number
+global.kontakadmin = ["1234567890"]; // admin whatsapp number
 global.kirimkontak_admin = false; // true = automatically send admin contact
 
 //========================================================
