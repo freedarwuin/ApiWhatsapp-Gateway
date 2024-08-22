@@ -100,7 +100,7 @@ http://localhost:5001/scan
 
 ```
 POST /send-message
-GET /send-message?message=Text&number=584129056224
+GET /send-message?message=Text&number=584100000000
 ```
 
 | Cuerpo      | Tipo     | Descripción                                                                       |
