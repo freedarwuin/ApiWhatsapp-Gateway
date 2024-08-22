@@ -92,7 +92,7 @@ npm run start
 Abrir en el navegador e iniciar una nueva sesión para obtener el código QR si el código de emparejamiento es falso
 
 ```bash
-http://localhost:80/scan
+http://localhost:5001/scan
 ```
 
 ## Referencia API
