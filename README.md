@@ -6,11 +6,11 @@
 <h4 align="center">Pasarela no oficial de WhatsApp que utiliza NodeJs</h4>
 
 <p align="center">
-  <a href="https://github.com/rtaserver/ApiWhatsapp-Gateway/releases">
+  <a href="https://github.com/freedarwuin/ApiWhatsapp-Gateway/releases">
     <img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/rtaserver/ApiWhatsapp-Gateway?label=Latest%20Release&labelColor=CE5A67">
   </a>
-  <a href="https://github.com/rtaserver/ApiWhatsapp-Gateway/blob/main/LICENSE">
-   <img alt="GitHub" src="https://img.shields.io/github/license/rtaserver/ApiWhatsapp-Gateway">
+  <a href="https://github.com/freedarwuin/ApiWhatsapp-Gateway/blob/main/LICENSE">
+   <img alt="GitHub" src="https://img.shields.io/github/license/freedarwuin/ApiWhatsapp-Gateway">
   </a>
   
 </p>
